@@ -5,4 +5,4 @@ Hi 👋, My name is Taewapon Banhanvoottikrai  this is my website portforlio and
 
 I'm still working on my website, sorry if you have to see this page. 😁
 
-but if you want to know more about me you can contact me @ Linkedin here. https://www.linkedin.com/in/taewaponb
+but if you want to know more about me you can contact me @ Linkedin here. https://www.linkedin.com/in/taewaponb/
