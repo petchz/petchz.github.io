@@ -7,12 +7,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-        <b>Taewapon Banhanvoottikrai</b>
+        <b>Taewapon B.</b>
         </p>
         <a>
         Hi 👋, My name is P3TCHZ and this is my website portforlio.
         <br></br>I'm still working on my website, sorry if you have to see this page. 😁
         <br></br>Here's my Linkedin >> <a href="https://www.linkedin.com/in/taewaponb/">Taewaponb</a>
+        <br></br>Here's my Facebook >> <a href="https://www.facebook.com/mayazen555">Taewaponb</a>
         </a>
       </header>
     </div>
