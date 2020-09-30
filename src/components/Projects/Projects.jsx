@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
-import { Container, Row, Col } from 'react-bootstrap';
-import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
+import React, { useContext, useEffect, useState } from "react";
+import Fade from "react-reveal/Fade";
+import Tilt from "react-tilt";
+import { Container, Row, Col } from "react-bootstrap";
+import PortfolioContext from "../../context/context";
+import Title from "../Title/Title";
+import ProjectImg from "../Image/ProjectImg";
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -41,19 +41,23 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                      <h3 className="project-wrapper__text-title">
+                        {title || "Project Title"}
+                      </h3>
                       <div>
                         <p>
                           {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae."}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        <p className="mb-4">
+                          <b>{info2 || ""}</b>
+                        </p>
                       </div>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
+                        href={url || "#!"}
                       >
                         Website
                       </a>
@@ -81,7 +85,7 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__image">
                       <a
-                        href={url || '#!'}
+                        href={url || "#!"}
                         target="_blank"
                         aria-label="Project Link"
                         rel="noopener noreferrer"
@@ -96,7 +100,7 @@ const Projects = () => {
                             transition: true,
                             axis: null,
                             reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
+                            easing: "cubic-bezier(.03,.98,.52,.99)",
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
