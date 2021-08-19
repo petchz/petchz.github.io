@@ -54,7 +54,7 @@ const Header = () => {
               loop
             />
             <br />
-            based in Thailand
+            based in Thailand.
           </h1>
         </Fade>
         <Fade
