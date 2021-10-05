@@ -109,7 +109,6 @@ export default (pagePath, callback) => {
     bodyAttributes,
     preBodyComponents,
     postBodyComponents: postBodyComponents.concat([
-      <script key={`polyfill`} src="/polyfill.js" noModule={true} />,
       <script key={`commons`} src="/commons.js" />,
     ]),
   })

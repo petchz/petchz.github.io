@@ -297,7 +297,6 @@ describe(`Production loader`, () => {
         result: {
           pageContext: `something something`,
         },
-        staticQueryHashes: [],
       }
       prodLoader.loadPageDataJson = jest.fn(() =>
         Promise.resolve({
@@ -306,16 +305,9 @@ describe(`Production loader`, () => {
         })
       )
 
-      const expectation = await prodLoader.loadPage(`/mypage`)
-
+      const expectation = await prodLoader.loadPage(`/mypage/`)
       expect(expectation).toMatchSnapshot()
-      expect(Object.keys(expectation)).toEqual([
-        `component`,
-        `json`,
-        `page`,
-        `staticQueryResults`,
-      ])
-
+      expect(Object.keys(expectation)).toEqual([`component`, `json`, `page`])
       expect(prodLoader.pageDb.get(`/mypage`)).toEqual(
         expect.objectContaining({
           payload: expectation,
@@ -364,7 +356,6 @@ describe(`Production loader`, () => {
       const pageData = {
         path: `/mypage/`,
         componentChunkName: `chunk`,
-        staticQueryHashes: [],
       }
       prodLoader.loadPageDataJson = jest.fn(() =>
         Promise.resolve({
@@ -387,7 +378,6 @@ describe(`Production loader`, () => {
       const pageData = {
         path: `/mypage/`,
         componentChunkName: `chunk`,
-        staticQueryHashes: [],
       }
       prodLoader.loadPageDataJson = jest.fn(() =>
         Promise.resolve({
@@ -426,7 +416,6 @@ describe(`Production loader`, () => {
         Promise.resolve({
           payload: {
             componentChunkName: `chunk`,
-            staticQueryHashes: [],
           },
           status: `success`,
         })
@@ -446,7 +435,6 @@ describe(`Production loader`, () => {
         Promise.resolve({
           payload: {
             componentChunkName: `chunk`,
-            staticQueryHashes: [],
           },
           status: `success`,
         })

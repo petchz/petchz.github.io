@@ -20,9 +20,9 @@ var _loader = require("./loader");
 
 var _devLoader = _interopRequireDefault(require("./dev-loader"));
 
-var _syncRequires = _interopRequireDefault(require("$virtual/sync-requires"));
+var _syncRequires = _interopRequireDefault(require("./sync-requires"));
 
-var _matchPaths = _interopRequireDefault(require("$virtual/match-paths.json"));
+var _matchPaths = _interopRequireDefault(require("./match-paths.json"));
 
 // Generated during bootstrap
 window.___emitter = _emitter.default;

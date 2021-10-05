@@ -44,7 +44,7 @@ const {
 
 const apiRunner = require(`./api-runner-ssr`);
 
-const syncRequires = require(`$virtual/sync-requires`);
+const syncRequires = require(`./sync-requires`);
 
 const {
   version: gatsbyVersion
@@ -85,8 +85,6 @@ const getPageDataUrl = pagePath => {
   const pageDataPath = getPageDataPath(pagePath);
   return `${__PATH_PREFIX__}/${pageDataPath}`;
 };
-
-const getStaticQueryUrl = hash => `${__PATH_PREFIX__}/static/d/${hash}.json`;
 
 const getPageData = pagePath => {
   const pageDataPath = getPageDataPath(pagePath);
@@ -224,10 +222,8 @@ var _default = (pagePath, callback) => {
   const pageDataUrl = getPageDataUrl(pagePath);
   const appDataUrl = getAppDataUrl();
   const {
-    componentChunkName,
-    staticQueryHashes = []
+    componentChunkName
   } = pageData;
-  const staticQueryUrls = staticQueryHashes.map(getStaticQueryUrl);
 
   class RouteHandler extends React.Component {
     render() {
@@ -370,14 +366,6 @@ var _default = (pagePath, callback) => {
     }));
   }
 
-  staticQueryUrls.forEach(staticQueryUrl => headComponents.push( /*#__PURE__*/React.createElement("link", {
-    as: "fetch",
-    rel: "preload",
-    key: staticQueryUrl,
-    href: staticQueryUrl,
-    crossOrigin: "anonymous"
-  })));
-
   if (appDataUrl) {
     headComponents.push( /*#__PURE__*/React.createElement("link", {
       as: "fetch",
@@ -424,30 +412,17 @@ var _default = (pagePath, callback) => {
     dangerouslySetInnerHTML: {
       __html: scriptChunkMapping
     }
-  }));
-  let bodyScripts = [];
-
-  if (chunkMapping[`polyfill`]) {
-    chunkMapping[`polyfill`].forEach(script => {
-      const scriptPath = `${__PATH_PREFIX__}${script}`;
-      bodyScripts.push( /*#__PURE__*/React.createElement("script", {
-        key: scriptPath,
-        src: scriptPath,
-        noModule: true
-      }));
-    });
-  } // Filter out prefetched bundles as adding them as a script tag
+  })); // Filter out prefetched bundles as adding them as a script tag
   // would force high priority fetching.
 
-
-  bodyScripts = bodyScripts.concat(scripts.filter(s => s.rel !== `prefetch`).map(s => {
+  const bodyScripts = scripts.filter(s => s.rel !== `prefetch`).map(s => {
     const scriptPath = `${__PATH_PREFIX__}/${JSON.stringify(s.name).slice(1, -1)}`;
     return /*#__PURE__*/React.createElement("script", {
       key: scriptPath,
       src: scriptPath,
       async: true
     });
-  }));
+  });
   postBodyComponents.push(...bodyScripts);
   apiRunner(`onPreRenderHTML`, {
     getHeadComponents,

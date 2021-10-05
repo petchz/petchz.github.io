@@ -9,7 +9,6 @@ import Link, {
   navigateTo,
   parsePath,
 } from "gatsby-link"
-import { useScrollRestoration } from "gatsby-react-router-scroll"
 import PageRenderer from "./public-page-renderer"
 import loader from "./loader"
 
@@ -71,7 +70,7 @@ useStaticQuery(graphql\`${query}\`);
 `)
   }
 
-  if (context?.[query]?.data) {
+  if (context[query] && context[query].data) {
     return context[query].data
   } else {
     throw new Error(
@@ -108,7 +107,6 @@ export {
   push, // TODO replace for v3
   replace, // TODO remove replace for v3
   navigateTo, // TODO: remove navigateTo for v3
-  useScrollRestoration,
   StaticQueryContext,
   StaticQuery,
   PageRenderer,

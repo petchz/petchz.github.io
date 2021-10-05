@@ -318,7 +318,6 @@ describe(`Dev loader`, () => {
         result: {
           pageContext: `something something`,
         },
-        staticQueryHashes: [],
       }
       devLoader.loadPageDataJson = jest.fn(() =>
         Promise.resolve({
@@ -329,12 +328,7 @@ describe(`Dev loader`, () => {
 
       const expectation = await devLoader.loadPage(`/mypage/`)
       expect(expectation).toMatchSnapshot()
-      expect(Object.keys(expectation)).toEqual([
-        `component`,
-        `json`,
-        `page`,
-        `staticQueryResults`,
-      ])
+      expect(Object.keys(expectation)).toEqual([`component`, `json`, `page`])
       expect(devLoader.pageDb.get(`/mypage`)).toEqual(
         expect.objectContaining({
           payload: expectation,
@@ -383,7 +377,6 @@ describe(`Dev loader`, () => {
       const pageData = {
         path: `/mypage/`,
         componentChunkName: `chunk`,
-        staticQueryHashes: [],
       }
       devLoader.loadPageDataJson = jest.fn(() =>
         Promise.resolve({
@@ -406,7 +399,6 @@ describe(`Dev loader`, () => {
       const pageData = {
         path: `/mypage/`,
         componentChunkName: `chunk`,
-        staticQueryHashes: [],
       }
       devLoader.loadPageDataJson = jest.fn(() =>
         Promise.resolve({
@@ -449,7 +441,6 @@ describe(`Dev loader`, () => {
         Promise.resolve({
           payload: {
             componentChunkName: `chunk`,
-            staticQueryHashes: [],
           },
           status: `success`,
         })
