@@ -33,7 +33,7 @@ export const projectsData = [
     title: "GUNS 'N BUBBLES",
     info:
       "This game is a part of Mini Jam 84: Bubbles. it's a 72-hour-long video game development event.",
-    info2: "Framework: Unity",
+    info2: "Unity",
     url: "https://calculus2.itch.io/gunsandbubbles/",
   },
   {
@@ -41,7 +41,7 @@ export const projectsData = [
     img: "linerichmenu.jpg",
     title: "LINE Rich Menu Manager",
     info: "Line Rich Menu Manager is the better way to manages your rich menu!",
-    info2: "Framework: React",
+    info2: "ReactJS with NodeJS",
     url: "https://linerichmenu.netlify.app/",
     repo: "https://github.com/petchz/linerichmenu", // if no repo, the button will not show up
   },
@@ -51,7 +51,7 @@ export const projectsData = [
     title: "MY SYLLABUS",
     info:
       "My Syllabus is a website for computer engineering student who didnt know what they need to learn in a semester. This website can help student know what to learn and what selective course to choose.",
-    info2: "Framework: Pure HTML with Bootstrap",
+    info2: "HTML with Bootstrap",
     url: "https://taewapon.site/mysyllabus/",
     repo: "https://github.com/petchz/mysyllabus", // if no repo, the button will not show up
   },

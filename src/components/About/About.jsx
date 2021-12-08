@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
-import { Container, Row, Col } from 'react-bootstrap';
-import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
-import PortfolioContext from '../../context/context';
+import React, { useContext, useState, useEffect } from "react";
+import Fade from "react-reveal/Fade";
+import { Container, Row, Col } from "react-bootstrap";
+import Title from "../Title/Title";
+import AboutImg from "../Image/AboutImg";
+import PortfolioContext from "../../context/context";
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -35,19 +35,25 @@ const About = () => {
             </Fade>
           </Col>
           <Col md={6} sm={12}>
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+            <Fade
+              left={isDesktop}
+              bottom={isMobile}
+              duration={1000}
+              delay={1000}
+              distance="30px"
+            >
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
                   <b>Computer Engineering</b>
-                  {paragraphOne || ' | Khon Kaen University'}
+                  {paragraphOne || " | Khon Kaen University"}
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphTwo ||
-                    'I am a computer engineering student from Khon Kaen University seeking to find a new opportunity where I can apply my knowledge and skills for continuous improvement.'}
+                    "I am a computer engineering student from Khon Kaen University seeking to find a new opportunity where I can apply my knowledge and skills for continuous improvement."}
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphThree ||
-                    'I am a quick learner and also good at self learning, I always look at positive side of things but that does not mean I will overlook my problems.'}
+                    "I am a quick learner and also good at self learning, I always look at positive side of things but that does not mean I will overlook my problems."}
                 </p>
 
                 {resume && (
