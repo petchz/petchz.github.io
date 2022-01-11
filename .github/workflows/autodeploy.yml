@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
+      - name: Run "yarn" command
+        run: yarn
       - name: Run "yarn run deploy" command
-      - run: yarn
-      - run: yarn run deploy
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+        run: yarn run deploy
