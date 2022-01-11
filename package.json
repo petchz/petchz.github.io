@@ -10,7 +10,6 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "autoprefixer": "^9.8.6",
-    "gh-pages": "^3.2.3",
     "lottie-web": "^5.7.5",
     "postcss": "^8.2.13",
     "react": "^17.0.1",
