@@ -7,6 +7,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Run "yarn run deploy" command
-        run: yarn
-        run: yarn run deploy
+      - run: | 
+        yarn
+        yarn run deploy
       - run: echo "🍏 This job's status is ${{ job.status }}."
