@@ -1,5 +1,4 @@
 import React from "react";
-
 const Header = () => {
   return (
     <nav className="space-x-10">
