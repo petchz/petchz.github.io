@@ -55,7 +55,7 @@ export default function Contact() {
       <a href="mailto:taewapon.b@gmail.com">
         <Tree name="Email" style={{ color: "#EA4335" }} />
       </a>
-      <a href="https://taewapon.site/todgame">
+      <a href="https://linkedin.com/in/taewaponb">
         <Tree name="Linkedin" style={{ color: "#0A66C2" }} />
       </a>
       <a href="https://taewaponb.medium.com">
