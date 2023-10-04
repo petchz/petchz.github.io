@@ -64,7 +64,7 @@ export default function Contact() {
       <a href="https://github.com/taewaponb">
         <Tree name="Github" style={{ color: "#181717" }} />
       </a>
-      <a href="https://www.canva.com/design/DAE8OxSRLcw/kP4q6NI1MmdslnCzKPOiAA/view?utm_content=DAE8OxSRLcw">
+      <a href="https://www.canva.com/design/DAFsJPDebQ4/kkxh42m_Jm3sW7v_w5Dn6Q/view">
         <Tree name="Resume" style={{ color: "#36EAF2" }} />
       </a>
     </Tree>
