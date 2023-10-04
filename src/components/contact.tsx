@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useSpring, a } from "@react-spring/web";
 import useMeasure from "react-use-measure";
-import { Container, Title, Frame, Content, toggle } from "../styles";
+import { Title, Frame, Content, toggle } from "../styles";
 import * as Icons from "../icons";
 
 function usePrevious<T>(value: T) {

@@ -54,10 +54,10 @@ export default function App() {
   return (
     <Container>
       <Tree name="← Press here">
-        <Tree name="Hello and sorry!" />
-        <Tree name="My website is in development right now." />
-        <Tree name="And I don't think I can finish it soon." />
-        <Tree name="But don't worry! I've put my contact below." />
+        <Tree name="Hello! My name is Petch 💎" />
+        <Tree name="Currently working as a software engineer at ODDS (Thailand)" />
+        <Tree name="I'm passionate about continuous improvement and delivering high-quality products." />
+        <Tree name="In case you want to connect with me. See below 😁" />
         <Contact />
       </Tree>
     </Container>
